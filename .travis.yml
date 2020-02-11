@@ -1,0 +1,14 @@
+language: go
+
+go:
+  - 1.11x
+  - 1.12x
+  - 1.13x
+
+go_import_path: github.com/kodeart/warframe/acolytes
+
+install:
+  - ./build.sh
+
+script:
+  - go test -v -bench=. ./...
