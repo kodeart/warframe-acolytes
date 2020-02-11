@@ -7,8 +7,20 @@ go:
 
 go_import_path: github.com/kodeart/warframe-acolytes
 
-install:
+before_deploy:
   - ./build.sh
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: releases/*
+  skip_cleanup: true
+  on:
+    tags: true
 
 script:
   - go test -v -bench=. ./...
+
+notifications:
+  email: false

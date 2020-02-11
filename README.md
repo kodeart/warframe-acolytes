@@ -1,18 +1,19 @@
 Warframe Acolytes Tracker
 =========================
 
+[![Build Status](https://travis-ci.org/kodeart/warframe-acolytes.svg?branch=master)](https://travis-ci.org/kodeart/warframe-acolytes)
+
 Warframe Acolytes Tracker is a command-line application
 for tracking the appearance of the Stalker's acolytes.
 
 ![Warframe Acolytes Tracker](./images/screenshot.png)
-
 
 Enjoy!
 
 Usage
 -----
 
-Run the binary for your operating system.
+[Download the ZIP file][1], unzip it anywhere you like, run the binary for your operating system.
 
 | OS               | executable      |
 |------------------|-----------------|
@@ -58,3 +59,15 @@ acolytes.exe track -n -r 60
 ``` 
 will scan the world state every 60 seconds, You cannot set it below 30.
 
+### Build from source
+
+- checkout the source code
+- run `./build.sh`
+- the binaries are in the `./releases` folder
+
+License
+-------
+[![Software license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
+
+
+[1]: https://github.com/kodeart/warframe-acolytes/releases/latest
