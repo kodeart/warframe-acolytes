@@ -2,9 +2,8 @@ package cmd
 
 import (
 	"errors"
-	"os"
+	"log"
 
-	"github.com/happierall/l"
 	"github.com/kodeart/warframe-acolytes/internal"
 	"github.com/spf13/cobra"
 )
@@ -21,8 +20,7 @@ var trackCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		t, err := internal.NewTracker(refresh, silent, notify)
 		if err != nil {
-			l.Errorf("%s", err)
-			os.Exit(1)
+			log.Fatalf("%s", err)
 		}
 
 		t.Run()

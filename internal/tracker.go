@@ -2,6 +2,7 @@ package internal
 
 import (
 	"fmt"
+	"log"
 	"math"
 	"os"
 	"strings"
@@ -10,7 +11,6 @@ import (
 	"github.com/gen2brain/beeep"
 	ui "github.com/gizak/termui/v3"
 	"github.com/gizak/termui/v3/widgets"
-	"github.com/happierall/l"
 )
 
 const (
@@ -47,7 +47,7 @@ func NewTracker(refresh uint, silent, notify bool) (*Tracker, error) {
 // Run the tracker.
 func (t *Tracker) Run() {
 	if err := ui.Init(); err != nil {
-		l.Errorf(`failed to initialize the termui: %v`, err)
+		log.Fatalf(`failed to initialize the termui: %v`, err)
 	}
 	defer ui.Close()
 
