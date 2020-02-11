@@ -5,7 +5,7 @@ go:
   - 1.12x
   - 1.13x
 
-go_import_path: github.com/kodeart/warframe/acolytes
+go_import_path: github.com/kodeart/warframe-acolytes
 
 install:
   - ./build.sh

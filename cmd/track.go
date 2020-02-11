@@ -5,7 +5,7 @@ import (
 	"os"
 
 	"github.com/happierall/l"
-	"github.com/kodeart/warframe/acolytes/internal"
+	"github.com/kodeart/warframe-acolytes/internal"
 	"github.com/spf13/cobra"
 )
 

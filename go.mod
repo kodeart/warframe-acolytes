@@ -1,4 +1,4 @@
-module github.com/kodeart/warframe/acolytes
+module github.com/kodeart/warframe-acolytes
 
 go 1.13
 

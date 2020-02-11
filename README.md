@@ -1,19 +1,41 @@
-Warframe Acolyte Tracker
-========================
+Warframe Acolytes Tracker
+=========================
 
-Warframe Acolyte Tracker is a command-line application
+Warframe Acolytes Tracker is a command-line application
 for tracking the appearance of the Stalker's acolytes.
+
+![Warframe Acolytes Tracker](./images/screenshot.png)
+
+
+Enjoy!
 
 Usage
 -----
 
-Choose the executable for your operation system.
+Run the binary for your operating system.
 
 | OS               | executable      |
 |------------------|-----------------|
 | Windows (64 bit) | acolytes.exe    |
 | Linux            | acolytes-linux  |
 | MacOS            | acolytes-darwin |
+
+```shell script
+cd path/to/warframe/acolytes/folder
+```
+```shell script
+# Windows
+acolytes.exe track -n
+```
+```shell script
+# Linux
+$ ./acolytes-linux track -n
+```
+```shell script
+# MacOS
+$ ./acolytes-darwin track -n
+```
+_Tip: you may rename the binary to `acolytes` for Linux/MacOS_
 
 ### Examples
 
@@ -27,4 +49,12 @@ This option is **off** by default. **To enable** notifications, run with `-n` fl
 - if notifications are enabled, a beep sound will play. **To disable sound** run with `-s` (silent) flag
 > acolytes.exe track -ns
 
-Enjoy!
+### World check frequency
+
+You can use the `--refresh` or `-r` flag to set the seconds for
+world-state check, if you feel that 30s default is too frequent. Ex:
+```shell script
+acolytes.exe track -n -r 60
+``` 
+will scan the world state every 60 seconds, You cannot set it below 30.
+
