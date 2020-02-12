@@ -26,11 +26,11 @@ func (t *Tracker) trackAcolytes() (err error) {
 	)
 
 	resp, err := fetchUri(WorldStateUrl)
-	defer resp.Body.Close()
 
 	if err = json.NewDecoder(resp.Body).Decode(&world); err != nil {
 		return err
 	}
+	defer resp.Body.Close()
 
 	for _, a := range world["PersistentEnemies"].([]interface{}) {
 		at := a.(map[string]interface{})["AgentType"].(string)

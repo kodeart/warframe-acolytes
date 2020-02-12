@@ -2,6 +2,7 @@ package internal
 
 import (
 	"encoding/json"
+	"errors"
 	"time"
 )
 
@@ -112,11 +113,11 @@ func (a *Acolyte) Notified() bool {
 
 func (t *Tracker) loadNodes() error {
 	resp, err := fetchUri(MissionNodes)
-	defer resp.Body.Close()
 
 	if err != nil {
-		return err
+		return errors.New("check your internet connection")
 	}
+	defer resp.Body.Close()
 
 	return json.NewDecoder(resp.Body).Decode(&t.nodes)
 }
