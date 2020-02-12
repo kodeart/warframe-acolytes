@@ -27,8 +27,8 @@ func TestIntMillisToTime(t *testing.T) {
 	}
 
 	expect := "2020-02-09T22:15:11+01:00"
-	dt := ms.Format(time.RFC3339)
-	if dt != expect {
-		t.Errorf("Converted milliseconds are not correct, expected result is %s", expect)
+	result := ms.Format(time.RFC3339)
+	if result != expect {
+		t.Errorf("Converted milliseconds are not correct, expected result is %s, got %s", expect, result)
 	}
 }
