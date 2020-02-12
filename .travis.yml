@@ -1,9 +1,8 @@
 language: go
 
 go:
-  - 1.11x
-  - 1.12x
-  - 1.13x
+  - '1.12'
+  - '1.13'
 
 go_import_path: github.com/kodeart/warframe-acolytes
 
