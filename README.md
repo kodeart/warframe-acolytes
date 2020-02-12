@@ -6,6 +6,9 @@ Warframe Acolytes Tracker
 Warframe Acolytes Tracker is a command-line application
 for tracking the appearance of the Stalker's acolytes.
 
+**This app DOES NOT use Warframe game files**.
+You are perfectly safe.
+
 ![Warframe Acolytes Tracker](./images/screenshot.png)
 
 Enjoy!
@@ -13,13 +16,13 @@ Enjoy!
 Usage
 -----
 
-[Download the ZIP file][1], unzip it anywhere you like, run the binary for your operating system.
+[Download the ZIP file][1] for your operating system, unzip it anywhere you like, run the binary.
 
-| OS               | executable      |
-|------------------|-----------------|
-| Windows (64 bit) | acolytes.exe    |
-| Linux            | acolytes-linux  |
-| MacOS            | acolytes-darwin |
+| OS               | executable   | zip file             |
+|------------------|--------------|----------------------|
+| Windows (64 bit) | acolytes.exe | acolytes-windows.zip |
+| Linux            | acolytes     | acolytes-linux.zip   |
+| macOS            | acolytes     | acolytes-darwin.zip  |
 
 ```shell script
 cd path/to/warframe/acolytes/folder
@@ -27,26 +30,23 @@ cd path/to/warframe/acolytes/folder
 ```shell script
 # Windows
 acolytes.exe track -n
-```
-```shell script
+
 # Linux
-$ ./acolytes-linux track -n
-```
-```shell script
+$ ./acolytes track -n
+
 # MacOS
-$ ./acolytes-darwin track -n
+$ ./acolytes track -n
 ```
-_Tip: you may rename the binary to `acolytes` for Linux/MacOS_
 
 ### Examples
 
 - `track` command without arguments will run the tracker **without notifications and sound**
 > acolytes.exe track
-
+---
 - the tracker can send operating system notifications when the acolyte is discovered.
-This option is **off** by default. **To enable** notifications, run with `-n` flag
+This option is **off** by default. **To enable notifications**, run with `-n` flag
 > acolytes.exe track -n
-
+---
 - if notifications are enabled, a beep sound will play. **To disable sound** run with `-s` (silent) flag
 > acolytes.exe track -ns
 
@@ -65,8 +65,8 @@ will scan the world state every 60 seconds, You cannot set it below 30.
 - run `./build.sh`
 - the binaries are in the `./releases` folder
 
-License
--------
+### License
+
 [![Software license](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](LICENSE)
 
 
