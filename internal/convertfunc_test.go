@@ -20,15 +20,11 @@ func TestStrMillisToTime(t *testing.T) {
 }
 
 func TestIntMillisToTime(t *testing.T) {
-	ms := IntMillisToTime(1581282911976)
+	value := int64(1581282911976)
+	expect := int64(1581282911)
+	ms := IntMillisToTime(value)
 
-	if ms.Unix() != 1581282911 {
-		t.Errorf("Converted milliseconds are not correct, the result was %v", ms.Unix())
-	}
-
-	expect := "2020-02-09T22:15:11+01:00"
-	result := ms.Format(time.RFC3339)
-	if result != expect {
-		t.Errorf("Converted milliseconds are not correct, expected result is %s, got %s", expect, result)
+	if ms.Unix() != expect {
+		t.Errorf("Converted milliseconds are not correct, expected %d, got %d", expect, ms.Unix())
 	}
 }
